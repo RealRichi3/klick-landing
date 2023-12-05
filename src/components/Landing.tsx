@@ -1,5 +1,6 @@
 import logo from "../assets/Group 36.png";
 import mobile from "../assets/Group 39.png";
+import socials from "../assets/Group 5.png"
 
 const Landing: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Landing: React.FC = () => {
 
         <p className="md:text-3xl font-medium">info@klick.africa</p>
       </header>
-      <section className="grid lg:grid-cols-2 gap-10 pt-5">
+      <section className="grid lg:grid-cols-2 gap-4 pt-5">
         <div className="lg:leading-[66px] md:leading-[50px] font-medium md:text-[44px] font-[poppins]">
           At Klick, customer satisfaction is our top priority. We are committed
           to resolving any complaints you may have about your order to the best
@@ -26,9 +27,12 @@ const Landing: React.FC = () => {
         <p className="mb-6 font-normal">
           To register a complaint, please complete the form below
         </p>
-        <form action="">
+        <form action="" className="">
           <div className="w-full mb-4">
-            <label className="block">Enter your name</label>
+            <div>
+              <label className="">Enter your name</label>
+              <span className="text-red-400 ml-2">*</span>
+            </div>
             <input type="text" className="inputs" id="text" />
           </div>
           <div className="w-full mb-4">
@@ -46,11 +50,21 @@ const Landing: React.FC = () => {
             <input
               type="file"
               id="text"
-              className="bg-transparent rounded border-dashed border border-white md:p-4 w-4/6 max-sm:w-full p-2 mt-2 md:mt-4"
+              className="bg-transparent rounded border-dashed border border-white md:p-4 w-1/2 max-lg:w-full p-2 mt-2 md:mt-4"
             />
           </div>
 
-          {/* <button className="p-3 border border-red-500 my-5">Submit</button> */}
+          <button className="p-3 border border-[#FEDD00] bg-[#FEDD00] lg:text-lg text-black py-4 px-40 rounded-full my-5 text-center font-normal max-sm:w-full max-sm:py-2 md:translate-x-[20%] ">
+            Submit Complaint
+          </button>
+
+          <p className="md:text-3xl text-center lg:w-1/2">
+            A Klick representative will contact you in 48 hours
+          </p>
+
+          <div className="justify-center lg:justify-start flex lg:w-1/2">
+            <img src={socials} alt="" className="max-sm:h-[20px] mt-6 " />
+          </div>
         </form>
       </div>
     </main>
