@@ -1,6 +1,9 @@
 import logo from "../assets/Group 36.png";
 import mobile from "../assets/Group 39.png";
-import socials from "../assets/Group 5.png"
+import instagram from "../assets/instagram.png";
+import twitter from "../assets/twitter.png";
+import facebook from "../assets/facebook.png";
+import youtube from "../assets/youtube.png";
 
 const Landing: React.FC = () => {
   return (
@@ -13,7 +16,7 @@ const Landing: React.FC = () => {
         <p className="md:text-3xl font-medium">info@klick.africa</p>
       </header>
       <section className="grid lg:grid-cols-2 gap-4 pt-5">
-        <div className="lg:leading-[66px] md:leading-[50px] font-medium md:text-[44px] font-[poppins]">
+        <div className="lg:leading-[66px] md:leading-[50px] font-medium md:text-[44px] font-[poppins] sm:text-[30px] sm:leading-[40px]">
           At Klick, customer satisfaction is our top priority. We are committed
           to resolving any complaints you may have about your order to the best
           of our ability.
@@ -36,11 +39,17 @@ const Landing: React.FC = () => {
             <input type="text" className="inputs" id="text" />
           </div>
           <div className="w-full mb-4">
-            <label className="block">Klick Order Number</label>
+            <div>
+              <label className="">Klick Order Number</label>
+              <span className="text-red-400 ml-2">*</span>
+            </div>
             <input type="text" className="inputs" id="text" />
           </div>
           <div className="w-full mb-4">
-            <label className="block">Details Of Complaint</label>
+            <div>
+              <label className="">Details Of Complaint</label>
+              <span className="text-red-400 ml-2">*</span>
+            </div>
             <input type="text" id="text" className="inputs" />
           </div>
           <div className="w-full mb-4">
@@ -54,17 +63,56 @@ const Landing: React.FC = () => {
             />
           </div>
 
-          <button className="p-3 border border-[#FEDD00] bg-[#FEDD00] lg:text-lg text-black py-4 px-40 rounded-full my-5 text-center font-normal max-sm:w-full max-sm:py-2 md:translate-x-[20%] ">
-            Submit Complaint
-          </button>
+          <div className="flex items-start flex-col lg:w-1/2">
+            <button
+              type="submit"
+              className="p-3 border border-[#FEDD00] bg-[#FEDD00] lg:text-3xl text-black lg:py-4 lg:px-10 rounded-full my-5 text-center font-normal] w-full sm:w-full md:w-3/4 hover:bg-yellow-300 duration-300"
+            >
+              Submit Complaint
+            </button>
 
-          <p className="md:text-3xl text-center lg:w-1/2">
-            A Klick representative will contact you in 48 hours
-          </p>
+            <p className="md:text-3xl text-center w-full">
+              A Klick representative will contact you in 48 hours
+            </p>
 
-          <div className="justify-center lg:justify-start flex lg:w-1/2">
-            <img src={socials} alt="" className="max-sm:h-[20px] mt-6 " />
+            <div className="flex gap-4 max-md:justify-center justify-start w-full mt-4">
+              <a href="/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={facebook}
+                  alt="facebook icn"
+                  className="border rounded-full p-2"
+                />
+              </a>
+              <a href="/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={twitter}
+                  alt="twitter icon"
+                  className="border rounded-full p-2"
+                />
+              </a>
+              <a href="/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={instagram}
+                  alt="instagram icon"
+                  className="border rounded-full p-2"
+                />
+              </a>
+              <a
+                href="/"
+                className=""
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={youtube}
+                  alt="instagram icon"
+                  className="border rounded-full p-2"
+                />
+              </a>
+            </div>
           </div>
+
+          <div className="justify-center lg:justify-start flex lg:w-1/2"></div>
         </form>
       </div>
     </main>
