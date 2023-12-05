@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  background-color: #0485E8;
+}
+
+.inputs{
+   @apply bg-transparent rounded border border-white h-14 w-2/4 max-sm:w-full max-sm:h-9 mt-2 md:mt-4
+}
