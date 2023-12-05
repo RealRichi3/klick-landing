@@ -10,10 +10,17 @@ const Landing: React.FC = () => {
     <main className="md:px-10 px-3 text-white text-base 2xl:px-20">
       <header className="flex justify-between items-center">
         <div>
-          <img src={logo} alt="klick logo" className="md:h-24 md:w-52 h-10 2xl:h-60 2xl:w-[470px]" />
+          <img
+            src={logo}
+            alt="klick logo"
+            className="md:h-24 md:w-52 h-10 2xl:h-60 2xl:w-[470px]"
+          />
         </div>
-
-        <p className="md:text-3xl font-medium 2xl:text-6xl">info@klick.africa</p>
+        <a href="mailto:info@klick.africa">
+          <p className="md:text-3xl font-medium 2xl:text-6xl hover:text-[#fedd00] duration-500">
+            info@klick.africa
+          </p>
+        </a>
       </header>
       <section className="grid lg:grid-cols-2 gap-4 pt-5">
         <div className="md:leading-[50px] font-medium md:text-[44px] font-[poppins] sm:text-[30px] sm:leading-[40px] 2xl:leading-[120px] 2xl:text-[105px] xl:text-[62px] xl:leading-[66px]">
@@ -50,11 +57,18 @@ const Landing: React.FC = () => {
               <label className="">Details Of Complaint</label>
               <span className="text-[#EB270B] ml-2">*</span>
             </div>
-            <input type="text" id="text" className="inputs" />
+            <textarea
+              id="text"
+              className="inputs whitespace-normal py-2 2xl:py-6 resize-y min-h-[200px] 2xl:leading-[50px] 2xl:min-h-[300px]"
+            />
           </div>
           <div className="w-full mb-4 2xl:mb-10">
             <label className="block xl:mb-3">
-              Upload Supporting Documents (Optional)
+              Upload Supporting Documents 
+              <span className="text-[#fedd00]">
+              (Optional) 
+
+              </span>
             </label>
             <input
               type="file"
@@ -79,25 +93,13 @@ const Landing: React.FC = () => {
 
             <div className="flex gap-4 max-md:justify-center justify-start w-full mt-4">
               <a href="/" target="_blank" rel="noopener noreferrer">
-                <img
-                  src={facebook}
-                  alt="facebook icn"
-                  className="link-ft"
-                />
+                <img src={facebook} alt="facebook icn" className="link-ft" />
               </a>
               <a href="/" target="_blank" rel="noopener noreferrer">
-                <img
-                  src={twitter}
-                  alt="twitter icon"
-                  className="link-ft"
-                />
+                <img src={twitter} alt="twitter icon" className="link-ft" />
               </a>
               <a href="/" target="_blank" rel="noopener noreferrer">
-                <img
-                  src={instagram}
-                  alt="instagram icon"
-                  className="link-ft"
-                />
+                <img src={instagram} alt="instagram icon" className="link-ft" />
               </a>
               <a
                 href="/"
@@ -105,11 +107,7 @@ const Landing: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src={youtube}
-                  alt="instagram icon"
-                  className="link-ft"
-                />
+                <img src={youtube} alt="instagram icon" className="link-ft" />
               </a>
             </div>
           </div>
