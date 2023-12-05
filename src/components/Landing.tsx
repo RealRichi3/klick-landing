@@ -27,7 +27,7 @@ const Landing: React.FC = () => {
       </section>
 
       <div className="md:text-2xl mb-5 font-semibold 2xl:text-[40px] mt-10 lg:mt-20 2xl:mt-20">
-        <p className="mb-6 font-normal 2xl:text-4xl">
+        <p className="mb-6 font-normal 2xl:text-4xl 2xl:mb-20">
           To register a complaint, please complete the form below
         </p>
         <form action="" className="">
