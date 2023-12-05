@@ -67,7 +67,7 @@ const Landing: React.FC = () => {
             <div className="flex justify-center items-center w-full xl:mt-10">
               <button
                 type="submit"
-                className="p-3 border border-[#FEDD00] bg-[#FEDD00] lg:text-3xl text-black lg:py-4 lg:px-10 rounded-full my-5 text-center font-normal] w-full sm:w-full md:w-3/4 hover:bg-yellow-200 duration-300 2xl:text-[50px] 2xl:py-10 2xl:mb-10"
+                className="p-3 border border-[#FEDD00] bg-[#FEDD00] lg:text-3xl text-black lg:py-4 lg:px-10 rounded-full my-5 text-center font-normal w-full sm:w-full md:w-3/4 hover:bg-[#fedc00dc] duration-500 2xl:text-[50px] 2xl:py-10 2xl:mb-10"
               >
                 Submit Complaint
               </button>
