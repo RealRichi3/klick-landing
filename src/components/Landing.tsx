@@ -16,7 +16,7 @@ const Landing: React.FC = () => {
         <p className="md:text-3xl font-medium 2xl:text-6xl">info@klick.africa</p>
       </header>
       <section className="grid lg:grid-cols-2 gap-4 pt-5">
-        <div className="lg:leading-[66px] md:leading-[50px] font-medium md:text-[44px] font-[poppins] sm:text-[30px] sm:leading-[40px] 2xl:leading-[120px] 2xl:text-[115px]">
+        <div className="md:leading-[50px] font-medium md:text-[44px] font-[poppins] sm:text-[30px] sm:leading-[40px] 2xl:leading-[120px] 2xl:text-[105px] xl:text-[62px] xl:leading-[66px]">
           At Klick, customer satisfaction is our top priority. We are committed
           to resolving any complaints you may have about your order to the best
           of our ability.
@@ -26,29 +26,29 @@ const Landing: React.FC = () => {
         </div>
       </section>
 
-      <div className="md:text-2xl mb-5 font-semibold 2xl:text-[40px]">
-        <p className="mb-6 font-normal 2xl:text-4xl">
+      <div className="md:text-2xl mb-5 font-semibold 2xl:text-[40px] mt-10 lg:mt-20 2xl:mt-20">
+        <p className="mb-6 font-normal 2xl:text-4xl 2xl:mb-20">
           To register a complaint, please complete the form below
         </p>
         <form action="" className="">
           <div className="w-full mb-4 2xl:mb-10">
             <div>
               <label className="">Enter your name</label>
-              <span className="text-red-400 ml-2">*</span>
+              <span className="text-[#EB270B] ml-2">*</span>
             </div>
             <input type="text" className="inputs" id="text" />
           </div>
           <div className="w-full mb-4 2xl:mb-10">
             <div>
               <label className="">Klick Order Number</label>
-              <span className="text-red-400 ml-2">*</span>
+              <span className="text-[#EB270B] ml-2">*</span>
             </div>
             <input type="text" className="inputs" id="text" />
           </div>
           <div className="w-full mb-4 2xl:mb-10">
             <div>
               <label className="">Details Of Complaint</label>
-              <span className="text-red-400 ml-2">*</span>
+              <span className="text-[#EB270B] ml-2">*</span>
             </div>
             <input type="text" id="text" className="inputs" />
           </div>
@@ -59,7 +59,7 @@ const Landing: React.FC = () => {
             <input
               type="file"
               id="text"
-              className="bg-transparent rounded border-dashed border border-white md:p-4 w-1/2 max-lg:w-full p-2 mt-2 md:mt-4"
+              className="bg-transparent rounded border-dashed border border-white md:p-4 w-1/2 max-lg:w-full p-2 mt-2 md:mt-4 upload"
             />
           </div>
 
@@ -67,13 +67,13 @@ const Landing: React.FC = () => {
             <div className="flex justify-center items-center w-full xl:mt-10">
               <button
                 type="submit"
-                className="p-3 border border-[#FEDD00] bg-[#FEDD00] lg:text-3xl text-black lg:py-4 lg:px-10 rounded-full my-5 text-center font-normal] w-full sm:w-full md:w-3/4 hover:bg-yellow-300 duration-300"
+                className="p-3 border border-[#FEDD00] bg-[#FEDD00] lg:text-3xl text-black lg:py-4 lg:px-10 rounded-full my-5 text-center font-normal] w-full sm:w-full md:w-3/4 hover:bg-yellow-200 duration-300 2xl:text-[50px] 2xl:py-10 2xl:mb-10"
               >
                 Submit Complaint
               </button>
             </div>
 
-            <p className="md:text-3xl text-center w-full">
+            <p className="md:text-3xl text-center w-full 2xl:text-[50px] 2xl:mb-10">
               A Klick representative will contact you in 48 hours
             </p>
 
