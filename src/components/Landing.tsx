@@ -17,7 +17,7 @@ const Landing: React.FC = () => {
           />
         </div>
         <a href="mailto:info@klick.africa">
-          <p className="md:text-3xl font-medium 2xl:text-6xl hover:text-[#fedd00] duration-500">
+          <p className="md:text-3xl font-medium 2xl:text-6xl hover:text-[#fedd00] hover:underline duration-500">
             info@klick.africa
           </p>
         </a>
