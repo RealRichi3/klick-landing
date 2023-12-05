@@ -10,10 +10,10 @@ const Landing: React.FC = () => {
     <main className="md:px-10 px-3 text-white text-base 2xl:px-20">
       <header className="flex justify-between items-center">
         <div>
-          <img src={logo} alt="klick logo" className="md:h-24 md:w-52 h-10" />
+          <img src={logo} alt="klick logo" className="md:h-24 md:w-52 h-10 2xl:h-60 2xl:w-[470px]" />
         </div>
 
-        <p className="md:text-3xl font-medium">info@klick.africa</p>
+        <p className="md:text-3xl font-medium 2xl:text-6xl">info@klick.africa</p>
       </header>
       <section className="grid lg:grid-cols-2 gap-4 pt-5">
         <div className="lg:leading-[66px] md:leading-[50px] font-medium md:text-[44px] font-[poppins] sm:text-[30px] sm:leading-[40px] 2xl:leading-[120px] 2xl:text-[115px]">
