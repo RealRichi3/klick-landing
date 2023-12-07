@@ -4,6 +4,7 @@
 
 *{
   background-color: #0485E8;
+  font-family: 'Poppins';
 }
 
 .inputs{
@@ -11,7 +12,7 @@
 }
 
 .link-ft{
-  @apply border rounded-full p-2 2xl:p-10 hover:border-[#0485E8] duration-500
+  @apply border rounded-full p-2 2xl:p-10 hover:border-[#FEDD00] hover:bg-[#FEDD00] duration-500
 }
 
 ::-webkit-file-upload-button{
