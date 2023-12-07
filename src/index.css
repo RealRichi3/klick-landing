@@ -2,18 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  background-color: #0485E8;
-  font-family: 'Poppins';
+* {
+    font-family: "Poppins";
 }
 
-.inputs{
-   @apply bg-transparent rounded border border-white h-14 w-2/4 max-lg:w-full max-sm:h-9 mt-2 md:mt-4 focus:outline-none pl-4 2xl:h-28
+body {
+    background-color: #0485e8;
+}
+.inputs {
+  @apply bg-transparent rounded border border-white h-14 w-2/4 max-lg:w-full max-sm:h-9 mt-2 md:mt-4 focus:outline-none pl-4 2xl:h-28;
 }
 
-.link-ft{
-  @apply border rounded-full p-2 2xl:p-10 hover:border-[#FEDD00] hover:bg-[#FEDD00] duration-500
+.link-ft {
+  @apply border rounded-full p-2 2xl:p-10 hover:border-[#FEDD00] hover:bg-[#FEDD00] duration-500;
 }
 
-::-webkit-file-upload-button{
-  @apply bg-[#FEDD0024] rounded-[5px] outline-none text-white border border-[#FEDD0024] p-2 hover:bg-[#048888] duration-300 2xl:p-10}
+::-webkit-file-upload-button {
+  @apply bg-[#FEDD0024] rounded-[5px] outline-none text-white border border-[#FEDD0024] p-2 hover:bg-[#048888] duration-300 2xl:p-10;
+}
+
+.spinIcon {
+}

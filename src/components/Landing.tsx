@@ -18,6 +18,8 @@ const Landing: React.FC = () => {
         file: "",
     });
 
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
@@ -26,13 +28,14 @@ const Landing: React.FC = () => {
         if (e.target.files && e.target.files.length > 0) {
             const selectedFile = e.target.files[0];
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            setForm((prevForm: unknown ) => ({ ...(prevForm as any), file: selectedFile }));
+            setForm((prevForm: any) => ({ ...prevForm, file: selectedFile }));
         }
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        setIsSubmitting(true);
         try {
             const formData = new FormData();
             formData.append("name", form.name);
@@ -40,14 +43,12 @@ const Landing: React.FC = () => {
             formData.append("complaint", form.details); // Assuming "details" is your complaint field
             formData.append("image", form.file); // Assuming "file" is your file field
 
-
             // Make API request
             const response = await axios.post(API_URL + "/upload", formData);
             console.log(response.data)
 
             toast.success("Complaint submitted successfully!")
-            // Refresh the page (you may want to replace this with a more sophisticated solution)
-            // window.location.reload();
+
             // Clear the form state
             setForm({
                 name: "",
@@ -55,9 +56,15 @@ const Landing: React.FC = () => {
                 details: "",
                 file: "",
             });
+            setIsSubmitting(false);
+
+            setTimeout(() => {
+                window.location.reload();
+            }, 3000);
         } catch (error) {
-            console.error(error)
+            console.error(error);
             toast.error("Failed to submit complaint. Please try again.");
+            setIsSubmitting(false);
         }
     };
 
@@ -152,9 +159,14 @@ const Landing: React.FC = () => {
                         <div className="flex justify-center items-center w-full xl:mt-10">
                             <button
                                 type="submit"
-                                className="p-3 border border-[#FEDD00] bg-[#FEDD00] lg:text-3xl text-black lg:py-4 lg:px-10 rounded-full my-5 text-center font-normal w-full sm:w-full md:w-3/4 hover:bg-[#fedc00dc] duration-500 2xl:text-[50px] 2xl:py-10 2xl:mb-10"
+                                className={`p-3 border border-[#FEDD00] bg-[#FEDD00] lg:text-3xl text-black lg:py-4 lg:px-10 rounded-full my-5 text-center font-normal w-full sm:w-full md:w-3/4 hover:bg-[#fedc00dc] duration-500 2xl:text-[50px] 2xl:py-10 2xl:mb-10 ${isSubmitting ? 'cursor-not-allowed bg-[grey]' : ''}`}
+                                disabled={isSubmitting}
                             >
-                                Submit Complaint
+                                {isSubmitting ? (
+                                    <span className='spinner'>Submitting...</span>
+                                ) : (
+                                    'Submit Complaint'
+                                )}
                             </button>
                         </div>
 
