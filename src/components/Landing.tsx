@@ -1,7 +1,6 @@
 import logo from "../assets/Group 36.png";
 import mobile from "../assets/Group 39.png";
 import instagram from "../assets/instagram.png";
-import twitter from "../assets/twitter.png";
 import facebook from "../assets/facebook.png";
 import React from "react";
 import axios from "axios";
